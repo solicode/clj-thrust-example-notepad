@@ -64,7 +64,6 @@ Getting the Browser REPL up and running is a little more involved, but it's stil
 	```clojure
 	(require 'weasel.repl.websocket)
 
-
 	(cemerick.piggieback/cljs-repl
 	  :repl-env (weasel.repl.websocket/repl-env
 	              :ip "0.0.0.0" :port 9001))
