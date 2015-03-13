@@ -30,7 +30,7 @@
           (fn [e]
             (let [content (aget e "target" "result")]
               (d/set-value! inputTextArea content)
-              (set-char-count! (.-length content))))))))
+              (set-char-count! (count content))))))))
 
   ; I would consider learning how to use core.async as it can be
   ; used in cases like this. You can avoid having to nest callbacks like
@@ -49,4 +49,4 @@
   (doseq [eventType [:keyup :change :paste]]
     (d/listen! inputTextArea eventType
       (fn [e]
-        (set-char-count! (aget e "target" "textLength"))))))
+        (set-char-count! (count (d/value inputTextArea)))))))
