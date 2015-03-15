@@ -17,7 +17,15 @@ Getting Started
 
 ### Running the app
 
-Simply clone this repository and run it with [Leiningen](http://leiningen.org):
+First, clone this repository:
+
+```
+git clone https://github.com/solicode/clj-thrust-example-notepad
+```
+
+You will also need the Thrust runtime in order to run this program. You can download it [here](https://github.com/breach/thrust/releases). By default, clj-thrust looks for the runtime in `$HOME/.thrust/`, but it's possible to specify a different location with `(create-process custom-thrust-directory)`.
+
+Once everything is ready, you can simply run it with [Leiningen](http://leiningen.org):
 
 ```
 lein run
