@@ -7,7 +7,7 @@
                  [org.clojure/clojurescript "0.0-3058"]
                  [org.clojure/core.async "0.1.346.0-17112a-alpha"]
                  [net.solicode/clj-thrust "0.1.0-SNAPSHOT"]
-                 [cheshire "5.4.0"]
+                 [cheshire "5.5.0"]
                  [compojure "1.3.2"]
                  [ring/ring-defaults "0.1.4"]
                  [ring-middleware-format "0.4.0"]
@@ -40,4 +40,6 @@
   :profiles {:dev     {:dependencies [[figwheel "0.2.5-SNAPSHOT"]
                                       [weasel "0.6.0"]
                                       [com.cemerick/piggieback "0.1.5"]]}
+             :1.5     {:dependencies [[org.clojure/clojure "1.5.1"]]}
+             :1.7     {:dependencies [[org.clojure/clojure "1.7.0-RC1"]]}
              :uberjar {:aot :all}})
